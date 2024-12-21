@@ -1,0 +1,602 @@
+/* الأساسي */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #800000;
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.lang-switch {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: linear-gradient(135deg, #800000, #d35400);
+    color: white;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #ffeaa7;
+}
+
+.sidebar ul li i {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.details {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.details .stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.details .stats div {
+    text-align: center;
+    margin: 10px;
+    flex: 1 1 20%;
+    max-width: 200px;
+}
+
+.details .stats div i {
+    font-size: 40px;
+    color: #800000;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.details .stats h3 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.details .stats p {
+    font-size: 16px;
+    color: #555;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* لجعل التصميم متجاوب */
+@media (max-width: 768px) {
+    .details .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* الأساسي */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #f9f9f9;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+/* رأس الصفحة */
+.main-header {
+    text-align: center;
+    background: linear-gradient(135deg, #800000, #d35400);
+    color: white;
+    padding: 40px 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.site-title {
+    font-size: 36px;
+    margin: 0;
+}
+
+.site-subtitle {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* أقسام الموقع */
+.sections {
+    text-align: center;
+}
+
+.section-title {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #800000;
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.section-card {
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.section-card i {
+    font-size: 40px;
+    color: #800000;
+    margin-bottom: 15px;
+}
+
+.section-card h3 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.section-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #800000;
+    color: white;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #d35400;
+}
+
+/* الفوتر */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background: #800000;
+    color: white;
+    margin-top: 30px;
+}
+
+/* رسوميات متحركة */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.animate-slide-up {
+    animation: slideUp 1s ease forwards;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 28px;
+    }
+
+    .site-subtitle {
+        font-size: 16px;
+    }
+}
+
+/* الأساسي */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #f9f9f9;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+/* رأس الصفحة */
+.main-header {
+    text-align: center;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 40px 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.page-title {
+    font-size: 36px;
+    margin: 0;
+}
+
+.page-subtitle {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* قسم التعريف */
+.about-awards {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #555;
+    padding: 10px;
+    line-height: 1.8;
+}
+
+/* قسم الجوائز */
+.awards-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.award-card {
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+}
+
+.award-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.award-card i {
+    font-size: 50px;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.award-card h3 {
+    font-size: 22px;
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+.award-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* قسم الملاحظة */
+.note-section {
+    margin-top: 30px;
+    padding: 15px;
+    background: #fef7d8;
+    border: 1px solid #f1c40f;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.note {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+/* الفوتر */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background: #2c3e50;
+    color: white;
+    margin-top: 30px;
+}
+
+/* رسوميات متحركة */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.animate-slide-up {
+    animation: slideUp 1s ease forwards;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    .award-card {
+        width: 100%;
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+
+    .page-subtitle {
+        font-size: 16px;
+    }
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 36px;
+    color: #1e7a33;
+    font-weight: bold;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+/* Competition Types */
+.competition-types {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.competition {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    width: 22%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.competition:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.competition i {
+    font-size: 40px;
+    color: #1e7a33;
+    margin-bottom: 15px;
+}
+
+.competition h2 {
+    font-size: 22px;
+    color: #1e7a33;
+    margin-bottom: 10px;
+}
+
+.competition p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Register Button */
+.register-btn {
+    display: inline-block;
+    background-color: #1e7a33;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.register-btn:hover {
+    background-color: #155d2e;
+}
+
+.register-btn i {
+    margin-left: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .competition-types {
+        justify-content: center;
+    }
+
+    .competition {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .competition-types {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .competition {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .register-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+

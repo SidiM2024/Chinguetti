@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة التسجيل</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #4CAF50, #81C784);
+            color: #333;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            font-size: 24px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+            background-color: #f9f9f9;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #4CAF50;
+            box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+            outline: none;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 12px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .form-group button:hover {
+            background: #45a049;
+        }
+
+        .sidebar {
+            width: 250px;
+            height: 100%;
+            background: #333;
+            color: white;
+            position: fixed;
+            top: 0;
+            right: 0;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .sidebar.active {
+            transform: translateX(0);
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            background: #4CAF50;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            border-bottom: 1px solid #444;
+        }
+
+        .sidebar ul li a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background: #4CAF50;
+        }
+
+        .menu-toggle {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .menu-toggle:focus {
+            outline: none;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .close-btn:focus {
+            outline: none;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+        تسجيل الدخول
+    </header>
+
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            مزامير شنقيط 
+            <button class="close-btn" onclick="toggleMenu()"><i class="fas fa-times"></i></button>
+        </div>
+        <ul>
+            <li><a href="home.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li><a href="awards.html"><i class="fas fa-trophy"></i> عن الجائزة</a></li>
+            <li><a href="competion.html"><i class="fas fa-edit"></i> المسابقة</a></li>
+            <li><a href="index.html"><i class="fas fa-calendar-alt"></i> الأحداث القادمة</a></li>
+            <li><a href="forum.html"><i class="fas fa-user-plus"></i> التسجيل</a></li> 
+        </ul>
+    </aside>
+
+    <div class="container">
+        <h2>صفحة التسجيل</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">الاسم الكامل</label>
+                <input type="text" id="name" name="name" required placeholder="أدخل اسمك الكامل">
+            </div>
+            <div class="form-group">
+                <label for="phone">رقم الهاتف</label>
+                <input type="text" id="phone" name="phone" required placeholder="أدخل رقم هاتفك">
+            </div>
+            <div class="form-group">
+                <label for="gender">الجنس</label>
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>اختر جنسك</option>
+                    <option value="male">رجل</option>
+                    <option value="female">امرأة</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="age">العمر</label>
+                <input type="number" id="age" name="age" required placeholder="أدخل عمرك">
+            </div>
+            <div class="form-group">
+                <button type="submit"><i class="fas fa-paper-plane"></i> تسجيل</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const gender = document.getElementById('gender').value;
+            const maleGroupLink = "https://chat.whatsapp.com/KlQnP58jm1fFaEvUH97eEP";
+            const femaleGroupLink = "https://chat.whatsapp.com/D0F5HmlHCD4JBqxQgL46qq";
+
+            if (gender === "male") {
+                window.location.href = maleGroupLink;
+            } else if (gender === "female") {
+                window.location.href = femaleGroupLink;
+            }
+        });
+    </script>
+</body>
+</html>

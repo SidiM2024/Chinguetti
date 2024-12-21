@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مزامير شنقيط</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <button class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <img src="logo.jpg" alt="Logo" class="logo">
+            <a href="https://translate.google.com/translate?sl=ar&tl=en&u=https://your-website.com" class="lang-switch" target="_blank">EN</a>
+        </div>
+    </header>
+    
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2>مزامير شنقيط</h2>
+            <button class="close-btn" onclick="toggleMenu()"><i class="fas fa-times"></i></button>
+        </div>
+        <ul>
+            <li><a href="home.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li><a href="awards.html"><i class="fas fa-info-circle"></i> عن الجائزة</a></li>
+            <li><a href="competion.html"><i class="fas fa-trophy"></i> المسابقة</a></li>
+            <li><a href="index.html"><i class="fas fa-calendar"></i> الأحداث القادمة</a></li>
+            <li><a href="forum.html"><i class="fas fa-user-plus"></i>  التسجيل</a></li>
+        </ul>
+    </aside>
+    
+    <header class="main-header">
+        <h1 class="site-title animate-fade-in">مزامير شنقيط</h1>
+        <p class="site-subtitle animate-slide-up">مسابقات قرآنية تهدف لتعزيز القيم الإسلامية ونشر علوم القرآن</p>
+    </header>
+
+
+    <main class="main-content">
+        <section class="sections">
+            <h2 class="section-title animate-slide-up">أقسام الموقع</h2>
+            <div class="section-grid">
+                <div class="section-card animate-fade-in">
+                    <i class="fas fa-award"></i>
+                    <h3>جوائز</h3>
+                    <p>تعرف على الجوائز القيمة المخصصة للفائزين</p>
+                    <a href="awards.html" class="btn">المزيد</a>
+                </div>
+                <div class="section-card animate-fade-in">
+                    <i class="fas fa-trophy"></i>
+                    <h3>المسابقات</h3>
+                    <p>استكشف تفاصيل المسابقات القرآنية</p>
+                    <a href="competion.html" class="btn">المزيد</a>
+                </div>
+                <div class="section-card animate-fade-in">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>الأحداث القادمة</h3>
+                    <p>تعرف على الأحداث والفعاليات القادمة</p>
+                    <a href="index.html" class="btn">المزيد</a>
+                </div>
+                <div class="section-card animate-fade-in">
+                    <i class="fas fa-user-edit"></i>
+                    <h3>التسجيل</h3>
+                    <p>سجل الآن للمشاركة في المسابقة</p>
+                    <a href="forum.html" class="btn">التسجيل</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>جميع الحقوق محفوظة &copy; 2024 مزامير شنقيط</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
